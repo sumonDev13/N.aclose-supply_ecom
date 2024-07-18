@@ -2,9 +2,14 @@
   "name": "server",
   "version": "1.0.0",
   "description": "an e-commerce",
-  "main": "index.js",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "build": "npm install --prefix ../client && npm run build --prefix ../client && npm install",
+    "client": "npm run dev --prefix ../client",
+    "dev": "concurrently \"npm run start\" \"npm run client\""
   },
   "author": "sumonDev13",
   "license": "ISC",
