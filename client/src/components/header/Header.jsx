@@ -1,56 +1,60 @@
+/* eslint-disable no-unused-vars */
 import { useState, useRef, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
+import logo from "../../assets/images/logo.png";
 import { BiHomeSmile } from "react-icons/bi";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { BsCart2, BsBox } from "react-icons/bs";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { MdLogin, MdLogout } from "react-icons/md";
-
-import SearchBar from './SearchBar'
-import logo from '../../assets/images/logo.svg'
+import { useAuth } from "../../context/auth";
+import SearchBar from "./SearchBar";
+import { useCart } from "../../context/cart";
+// import { toast } from "react-toastify";
+// import LogOut from "../../pages/Auth/LogOut";
 
 const Header = () => {
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const headerRef = useRef(null);
 
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const headerRef = useRef(null);
+    const [auth, setAuth, LogOut] = useAuth();
+    const [cartItems, setCartItems] = useCart();
 
+    let closeTimeout;
+    const toggleDropdown = () => {
+        clearTimeout(closeTimeout);
+        setDropdownOpen(true);
+    };
+    const closeDropdown = () => {
+        closeTimeout = setTimeout(() => {
+            setDropdownOpen(false);
+        }, 200);
+    };
 
-  let closeTimeout;
-  const toggleDropdown = () => {
-      clearTimeout(closeTimeout);
-      setDropdownOpen(true);
-  };
-  const closeDropdown = () => {
-      closeTimeout = setTimeout(() => {
-          setDropdownOpen(false);
-      }, 200);
-  };
+    const handleLogout = () => {
+        LogOut();
+    };
 
-  const handleLogout = () => {
-      LogOut();
-  };
+    const handleStickyHeader = () => {
+        if (
+            document.body.scrollTop > 0 ||
+            document.documentElement.scrollTop > 0
+        ) {
+            headerRef.current.classList.add("sticky__header");
+        } else {
+            headerRef.current.classList.remove("sticky__header");
+        }
+    };
 
-  const handleStickyHeader = () => {
-      if (
-          document.body.scrollTop > 0 ||
-          document.documentElement.scrollTop > 0
-      ) {
-          headerRef.current.classList.add("sticky__header");
-      } else {
-          headerRef.current.classList.remove("sticky__header");
-      }
-  };
-
-  useEffect(() => {
-      window.addEventListener("scroll", handleStickyHeader);
-      //clean up function
-      return () => {
-          window.removeEventListener("scroll", handleStickyHeader);
-      };
-  });
-
-  return (
-    <header ref={headerRef}>
+    useEffect(() => {
+        window.addEventListener("scroll", handleStickyHeader);
+        //clean up function
+        return () => {
+            window.removeEventListener("scroll", handleStickyHeader);
+        };
+    });
+    return (
+        <header ref={headerRef}>
             <div
                 className="container px-4 md:px-[50px] lg:px-[80px]"
                 // onMouseLeave={closeDropdown}
@@ -96,7 +100,7 @@ const Header = () => {
                             onMouseEnter={toggleDropdown}
                             onMouseLeave={closeDropdown}
                         >
-                            
+                            {auth.user ? (
                                 <div className="flex items-center gap-1 ">
                                     <AiOutlineUser className="text-[22px] " />
                                     <span className="text-[18px] max-w-fit hidden md:block lg:block ">
@@ -106,7 +110,7 @@ const Header = () => {
                                         <RiArrowDropDownLine className="group-hover:rotate-[180deg] transition-all " />
                                     </span>
                                 </div>
-                           
+                            ) : (
                                 <div className="flex items-center gap-1 w-fit">
                                     <Link
                                         to="/login"
@@ -124,7 +128,7 @@ const Header = () => {
                                         />
                                     </span>
                                 </div>
-                            
+                            )}
 
                             {/* dropdown menu */}
                             {isDropdownOpen && (
@@ -134,7 +138,7 @@ const Header = () => {
                                     onMouseLeave={closeDropdown}
                                 >
                                     <ul>
-                                        
+                                        {!auth.user && (
                                             <li className="p-1 hover:bg-slate-100 rounded-md">
                                                 <Link
                                                     to="/register"
@@ -232,7 +236,7 @@ const Header = () => {
                 </div>
             </div>
         </header>
-  )
-}
+    );
+};
 
-export default Header
+export default Header;

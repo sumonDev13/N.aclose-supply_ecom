@@ -1,7 +1,7 @@
+import "./App.css";
+import Layout from "./layouts/Layout";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-
-import Layout from "./layouts/Layout";
 
 function App() {
     const { pathname } = useLocation();
