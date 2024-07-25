@@ -5,11 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Banner.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import oppo from "../../../assets/images/Banners/oppo-reno7.webp";
 import samsung from "../../../assets/images/Banners/samsung.jpeg";
-import infinix from "../../../assets/images/Banners/infinix.jpeg";
-import flight from "../../../assets/images/Banners/flight.jpeg";
-import flight2 from "../../../assets/images/Banners/flight2.jpeg";
 import laptop from "../../../assets/images/Banners/laptop.png";
 import mattress from "../../../assets/images/Banners/mattress.jpg";
 import iphone from "../../../assets/images/Banners/iphone.jpg";
@@ -46,12 +42,8 @@ const Banner = () => {
     const banners = [
         iphone,
         laptop,
-        flight,
         samsung,
-        infinix,
         mattress,
-        oppo,
-        flight2,
     ];
 
     return (

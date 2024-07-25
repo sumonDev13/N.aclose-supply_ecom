@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState, useRef, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import Nalogo from "../../assets/images/Nalogo.png";
 import { BiHomeSmile } from "react-icons/bi";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { BsCart2, BsBox } from "react-icons/bs";
@@ -66,7 +66,7 @@ const Header = () => {
                             {/* logo */}
                             <Link to="/">
                                 <img
-                                    src={logo}
+                                    src={Nalogo}
                                     alt="logo"
                                     className="max-h-fit"
                                 />

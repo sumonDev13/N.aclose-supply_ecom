@@ -1,12 +1,11 @@
-import React from "react";
-import logo from "../../assets/images/logo.png";
+import Nalogo from "../../assets/images/Nalogo.png";
 
 const Footer = () => (
     <footer className="w-full text-white bg-[#212121]">
         <div className="container flex flex-col flex-wrap px-5 py-16 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
             <div className="flex-shrink-0 mx-auto text-center md:mx-0 md:text-left">
                 <figure>
-                    <img src={logo} alt="logo" />
+                    <img src={Nalogo} alt="logo" />
                 </figure>
 
                 <div className="mt-4 ">
@@ -175,8 +174,7 @@ const Footer = () => (
         <div className="container px-5 pb-5 mx-auto text-center">
             <a href="https://www.linkedin.com/in/aashish-dhiman/">
                 <p className="text-md text-gray-700 capitalize xl:text-center">
-                    © {new Date().getFullYear()} All rights reserved - Aashish
-                    Dhiman
+                    © {new Date().getFullYear()} All rights reserved - sumonDev@13
                 </p>
             </a>
         </div>
