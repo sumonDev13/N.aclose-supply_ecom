@@ -1,6 +1,6 @@
-import mailingBags from '../../assets/images/mailbagCard.jpeg';
-import chocolate from '../../assets/images/chocklateCard.jpeg';
-import battery from '../../assets/images/batteryCard.jpeg';
+import mailingBags from '../../assets/images/productCardImages/mailbagart2.png';
+import chocolate from '../../assets/images/productCardImages/cklateart2.png';
+import battery from '../../assets/images/productCardImages/bat1.png';
 // import home from "../../assets/images/Categories/home.png";
 // import travel from "../../assets/images/Categories/travel.png";
 // import appliances from "../../assets/images/Categories/appliances.png";
@@ -58,7 +58,7 @@ const Categories = () => {
                         className="flex flex-col gap-1 items-center p-2"
                         key={i}
                     >
-                        <div className="h-40 w-96 m-4">
+                        <div className="h-40 w-96 m-4 rounded">
                             <img
                                 draggable="false"
                                 className="h-full w-full object-contain"
@@ -66,7 +66,7 @@ const Categories = () => {
                                 alt={item.name}
                             />
                         </div>
-                        <span className="text-sm text-gray-800 font-medium group-hover:text-primary-blue">
+                        <span className="text-lg text-gray-800 font-medium group-hover:text-primary-blue">
                             {item.name}
                         </span>
                     </Link>

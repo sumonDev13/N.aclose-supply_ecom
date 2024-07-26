@@ -7,14 +7,9 @@ import ProductSlider from "./ProductsListing/ProductSlider";
 import { electronicProducts } from "../../utils/electronics";
 import { accessories } from "../../utils/accessories";
 import { fashionProducts } from "../../utils/fashion";
-// import { applianceProducts } from "../../utils/appliances";
-// import { furnitureProducts } from "../../utils/furniture";
-import electronics from "../../assets/images/electronics-card.jpg";
-import accessoryCard from "../../assets/images/accessory-card.jpg";
-import fashionCard from "../../assets/images/fashion-card.jpg";
-// import applianceCard from "../../assets/images/appliance-card.jpg";
-// import furnitureCard from "../../assets/images/furniture-card.jpg";
-// import Suggestion from "./Suggestions/Suggestion";
+import chocolates from '../../assets/images/productCardImages/cklateart2.png';
+import mailingBags from "../../assets/images/productCardImages/mailbagart.png";
+import batteries from '../../assets/images/productCardImages/bat2.png'
 import SeoData from "../../SEO/SeoData";
 
 const Home = () => {
@@ -32,14 +27,14 @@ const Home = () => {
                 <Categories />
                 {/* <DealSlider title={"Discounts for You"} /> */}
                 <ProductSlider
-                    title={"Best of Electronics"}
+                    title={"Best of Chocolates"}
                     products={electronicProducts}
-                    logo={electronics}
+                    logo={chocolates}
                 />
                 <ProductSlider
-                    title={"Beauty, Toys & More"}
+                    title={"Mailing Bags"}
                     products={accessories}
-                    logo={accessoryCard}
+                    logo={mailingBags}
                 />
                 {/* <Suggestion
                     title={"Suggested for You"}
@@ -47,9 +42,9 @@ const Home = () => {
                 /> */}
 
                 <ProductSlider
-                    title={"Fashion Top Deals"}
+                    title={"Batteries"}
                     products={fashionProducts}
-                    logo={fashionCard}
+                    logo={batteries}
                 />
                 {/* <ProductSlider
                     title={"TVs & Appliances"}

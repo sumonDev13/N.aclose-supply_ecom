@@ -6,7 +6,7 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import Slider from "@mui/material/Slider";
 import { useState, useEffect } from "react";
-import MinCategory from "../../components/MinCategory";
+// import MinCategory from "../../components/MinCategory";
 import Product from "./Product";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
@@ -117,7 +117,7 @@ const Products = () => {
         <>
             <SeoData title="All Products | Flipkart" />
 
-            <MinCategory />
+            {/* <MinCategory /> */}
             <main className="w-full pt-2 pb-5 sm:mt-0">
                 {/* <!-- row --> */}
                 <div className="flex gap-3 mt-2 sm:mt-2 sm:mx-3 m-auto ">
