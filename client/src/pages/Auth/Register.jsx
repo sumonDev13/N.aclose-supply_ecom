@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import auth from "../../assets/images/auth.png";
+import auth from "../../assets/images/signup.jpeg";
 import { Link } from "react-router-dom";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { toast } from "react-toastify";
@@ -103,7 +103,7 @@ const Register = () => {
                                         started
                                     </p>
                                 </div>
-                                <div className="mt-14">
+                                <div className="mt-0">
                                     <img src={auth} alt="auth image" />
                                 </div>
                             </div>
