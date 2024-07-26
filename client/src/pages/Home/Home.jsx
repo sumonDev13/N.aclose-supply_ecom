@@ -3,6 +3,7 @@ import ScrollToTopOnRouteChange from "../../utils/ScrollToTopOnRouteChange";
 import Categories from "../../components/header/Categories";
 import Banner from "./Banner/Banner";
 // import DealSlider from "./DealSlider/DealSlider";
+import Info from "../../components/info/Info";
 import ProductSlider from "./ProductsListing/ProductSlider";
 import { electronicProducts } from "../../utils/electronics";
 import { accessories } from "../../utils/accessories";
@@ -18,6 +19,9 @@ const Home = () => {
         <>
             <SeoData title="Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!" />
             <ScrollToTopOnRouteChange />
+            <div className="flex-grow border-t border-gray-200"></div>
+            <Info/>
+            
             {/* <Categories /> */}
             <main className="flex flex-col items-center gap-3 px-2 pb-5 sm:mt-2">
                 {/* <pre className="min-h-[60vh]">

@@ -58,7 +58,7 @@ const Categories = () => {
                         className="flex flex-col gap-1 items-center p-2"
                         key={i}
                     >
-                        <div className="h-40 w-96 m-4 rounded">
+                        <div className="h-40 w-96 m-4 rounded hover:scale-125 transition-all duration-500 cursor-pointer">
                             <img
                                 draggable="false"
                                 className="h-full w-full object-contain"
