@@ -52,14 +52,14 @@ const catNav = [
 const Categories = () => {
     return (
         <section className="sm:block bg-white p-0 min-w-full px-12 shadow overflow-hidden">
-            <div className="flex flex-col sm:flex sm:flex-row items-center justify-normal justify-between ">
+            <div className="flex flex-col sm:flex sm:flex-row items-center justify-between">
                 {catNav.map((item, i) => (
                     <Link
                         to={`/products?category=${item.name}`}
                         className="flex flex-col gap-1 items-center p-2"
                         key={i}
                     >
-                        <div className="h-40 w-72 m-4 rounded hover:scale-125 transition-all duration-500 cursor-pointer">
+                        <div className="h-40 w-72 m-4  hover:scale-125 transition-all duration-500 cursor-pointer">
                             <img
                                 draggable="false"
                                 className="h-full w-full object-contain"
