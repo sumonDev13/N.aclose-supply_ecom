@@ -1,5 +1,5 @@
 import { useState } from "react";
-import authImg from "../../assets/images/auth.png";
+import authImg from "../../assets/images/battery1.jpg";
 import axios from "axios";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
@@ -97,22 +97,9 @@ const Login = () => {
                                         Get access to your Orders, Wishlist and
                                         Recommendations
                                     </p>
-
-                                    <p className="text-xs">
-                                        <span>
-                                            User <br />
-                                        </span>
-                                        username - test@test.com <br />
-                                        password - test123 <br />
-                                        <span>
-                                            Admin <br />
-                                        </span>
-                                        username - store@flipkart.com <br />
-                                        password - admin123
-                                    </p>
                                 </div>
                                 <div className="">
-                                    <img src={authImg} alt="auth image" />
+                                   <img src={authImg} alt="auth image" />
                                 </div>
                             </div>
                         </div>
