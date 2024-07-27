@@ -2,9 +2,11 @@
 import { useState, useRef, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import Nalogo from "../../assets/images/Nalogo.png";
-import { BiHomeSmile } from "react-icons/bi";
+import { FaUser } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { BsCart2, BsBox } from "react-icons/bs";
+import { FaCartPlus } from "react-icons/fa6";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { MdLogin, MdLogout } from "react-icons/md";
 import { useAuth } from "../../context/auth";
@@ -83,7 +85,7 @@ const Header = () => {
                         {/* home */}
                         <div className="flex items-center group">
                             <NavLink to="/" className="flex items-center gap-1">
-                                <BiHomeSmile className="text-[22px]" />
+                                <FaHome className="text-[22px]" />
                                 <span className="text-[18px] hidden md:block lg:block group-hover:text-slate-700">
                                     Home
                                 </span>
@@ -116,7 +118,7 @@ const Header = () => {
                                         to="/login"
                                         className=" flex gap-1 group-hover:text-white"
                                     >
-                                        <AiOutlineUser className="text-[22px] group-hover:text-white" />
+                                        <FaUser className="text-[22px] group-hover:text-white" />
                                         <span className="text-[18px] max-w-fit hidden md:block lg:block ">
                                             <p>Sign in</p>
                                         </span>
@@ -225,7 +227,7 @@ const Header = () => {
                                     <span className="absolute w-4 h-4 text-[11px] text-center font-semibold left-2 bottom-3 text-white bg-red-500 rounded-[50%] ">
                                         {cartItems?.length}
                                     </span>
-                                    <BsCart2 className="text-[22px]" />
+                                    <FaCartPlus className="text-[22px]" />
                                     <span className="hidden md:block lg:block group-hover:text-slate-700">
                                         <p className="text-[18px]">Cart</p>
                                     </span>
