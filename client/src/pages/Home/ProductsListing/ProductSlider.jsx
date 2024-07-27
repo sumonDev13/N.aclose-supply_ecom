@@ -3,6 +3,7 @@ import Product from "./Product";
 import Slider from "react-slick";
 import { NextBtn, PreviousBtn } from "../Banner/Banner";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export const settings = {
     dots: false,
@@ -40,35 +41,46 @@ export const settings = {
 };
 
 const ProductSlider = ({ title, products, logo }) => {
+    const [isHovered, setIsHovered] = useState(false);
     return (
         <section className="bg-white w-full shadow p-0 overflow-hidden">
-            <div className="flex flex-col md:flex-row w-full items-center">
-                {/* Left Side */}
-                <div className="flex flex-row md:flex-col h-full gap-6 w-[100%] md:w-[20%] items-center justify-around bg-teal-50">
-                    <h1 className="text-[22px] pt-5 font-medium">{title}</h1>
-                    <Link
-                        to="/products"
-                        className="bg-primaryBlue text-[12px] sm:text-[16px] font-medium text-black px-2 sm:px-5 py-1.5 sm:py-2.5 rounded-sm hover:shadow-md"
-                    >
-                        VIEW ALL
-                    </Link>
-                    {logo && (
-                        <img
-                            src={logo}
-                            alt="card"
-                            className="hidden md:block w-[80%] h-[200px] mt-7"
-                        />
-                    )}
-                </div>
+      <div className="flex flex-col md:flex-row w-full items-center">
+        {/* Left Side */}
+        <div 
+          className="relative flex flex-row md:flex-col h-full gap-6 w-[100%] md:w-[20%] items-center justify-around bg-teal-50"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <h1 className="text-[22px] pt-5 font-medium">{title}</h1>
+          
+          {logo && (
+            <img
+              src={logo}
+              alt="card"
+              className="hidden md:block w-[80%] h-[200px] mt-7"
+            />
+          )}
 
-                {/* Right Side (Slider) */}
-                <Slider className="w-[100%] md:w-[80%]" {...settings}>
-                    {products?.map((item, i) => (
-                        <Product {...item} key={i} />
-                    ))}
-                </Slider>
+          {isHovered && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-25 transition-opacity duration-300">
+              <Link
+                to="/products"
+                className="bg-primaryBlue text-[12px] sm:text-[12px] font-medium text-white px-2 sm:px-5 py-1.5 sm:py-2.5 rounded-lg hover:shadow-md transition-all duration-300"
+              >
+                VIEW ALL
+              </Link>
             </div>
-        </section>
+          )}
+        </div>
+
+        {/* Right Side (Slider) */}
+        <Slider className="w-[100%] md:w-[80%]" {...settings}>
+          {products?.map((item, i) => (
+            <Product {...item} key={i} />
+          ))}
+        </Slider>
+      </div>
+    </section>
     );
 };
 
