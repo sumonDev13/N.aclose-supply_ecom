@@ -3,9 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+    
     section {
         @apply py-[75px];
     }
+    
+    html {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
 }
 
 @layer components {

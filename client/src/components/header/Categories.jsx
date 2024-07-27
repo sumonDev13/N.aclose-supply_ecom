@@ -1,6 +1,7 @@
 import mailingBags from '../../assets/images/productCardImages/mailbagart2.png';
 import chocolate from '../../assets/images/productCardImages/cklateart2.png';
 import battery from '../../assets/images/productCardImages/bat1.png';
+import home from '../../assets/images/productCardImages/mailbagart.png';
 // import home from "../../assets/images/Categories/home.png";
 // import travel from "../../assets/images/Categories/travel.png";
 // import appliances from "../../assets/images/Categories/appliances.png";
@@ -10,6 +11,10 @@ import battery from '../../assets/images/productCardImages/bat1.png';
 import { Link } from "react-router-dom";
 
 const catNav = [
+    {
+        name: "All Products",
+        icon: home,
+    },
     {
         name: "Chocolate",
         icon: chocolate,
@@ -22,10 +27,6 @@ const catNav = [
         name: "Mailing Bags",
         icon: mailingBags,
     },
-    // {
-    //     name: "Home",
-    //     icon: home,
-    // },
     // {
     //     name: "Travel",
     //     icon: travel,
@@ -51,14 +52,14 @@ const catNav = [
 const Categories = () => {
     return (
         <section className="sm:block bg-white p-0 min-w-full px-12 shadow overflow-hidden">
-            <div className="flex flex-col sm:flex sm:flex-row items-center justify-between group">
+            <div className="flex flex-col sm:flex sm:flex-row items-center justify-normal justify-between ">
                 {catNav.map((item, i) => (
                     <Link
                         to={`/products?category=${item.name}`}
                         className="flex flex-col gap-1 items-center p-2"
                         key={i}
                     >
-                        <div className="h-40 w-96 m-4 rounded hover:scale-125 transition-all duration-500 cursor-pointer">
+                        <div className="h-40 w-72 m-4 rounded hover:scale-125 transition-all duration-500 cursor-pointer">
                             <img
                                 draggable="false"
                                 className="h-full w-full object-contain"

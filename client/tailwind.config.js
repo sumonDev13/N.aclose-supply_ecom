@@ -16,6 +16,9 @@ export default {
     boxShadow: {
         primaryShadow: "0px_0px_8px_2px_rgba(212,212,212,0.6)",
     },
+    fontFamily: {
+      'roboto-bold': ["Roboto", "sans-serif"],
+    },
     },
   },
   plugins: [],
