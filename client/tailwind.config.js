@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        primaryButton:"#021526",
         primaryBlue: "#2874f0",
         primaryGreen: "#388e3c",
         orange: "#fb641b",

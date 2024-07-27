@@ -156,13 +156,13 @@ const Products = () => {
 
                                     <div className="flex gap-3 items-center mb-2 ">
                                         <span className="flex-1  min-w-[70px] border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">
-                                            ₹{price[0].toLocaleString()}
+                                        £{price[0].toLocaleString()}
                                         </span>
                                         <span className="font-medium text-gray-400">
                                             to
                                         </span>
                                         <span className="flex-1 min-w-[70px] border px-4 py-1 rounded-sm text-gray-800 bg-gray-50">
-                                            ₹{price[1].toLocaleString()}
+                                        £{price[1].toLocaleString()}
                                         </span>
                                     </div>
                                 </div>
