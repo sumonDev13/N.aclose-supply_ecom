@@ -73,7 +73,7 @@ const SearchBar = () => {
                             <input
                                 type="text"
                                 title="Search for Products, Brands and More"
-                                placeholder="Search for Products, Brands and More"
+                                placeholder="Search for Chocolates, Batteries and More"
                                 autoComplete="off"
                                 className=" bg-transparent w-[100%] border-none outline-none text-[14px] md:text-[16px] p-1 placeholder-gray-600 "
                                 onChange={handleInputChange}
