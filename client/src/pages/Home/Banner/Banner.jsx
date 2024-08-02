@@ -35,7 +35,7 @@ const Banner = () => {
         speed: 1500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        prevArrow: <PreviousBtn />,
+        prevArrow: <PreviousBtn/>,
         nextArrow: <NextBtn />,
     };
 
